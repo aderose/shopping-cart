@@ -9,7 +9,7 @@ const Home = () => {
       <h1 className="title">Vintage Champagne</h1>
       <p>With hundreds of Champagnes available, you'll be spoilt for choice!</p>
       <Link to="/shop" className="btn">
-        Shop Now
+        Shop Now <i class="arrow fas fa-chevron-right"></i>
       </Link>
     </div>
   );

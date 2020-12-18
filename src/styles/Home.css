@@ -14,8 +14,26 @@
   filter: brightness(110%);
 }
 
+.arrow {
+  opacity: 0.8;
+  transform: translateX(20%);
+}
+
 .home p {
   margin: 2em 0;
+}
+
+.home .btn:hover .arrow {
+  animation: stutter 0.75s linear infinite alternate;
+}
+
+@keyframes stutter {
+  0% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
 }
 
 @media (min-width: 500px) {
