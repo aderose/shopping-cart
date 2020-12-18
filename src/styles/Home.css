@@ -1,17 +1,17 @@
 .home .btn {
   border: none;
-  background-color: var(--tertiary);
-  color: var(--black);
+  background-image: linear-gradient(to bottom, var(--tertiary), var(--primary));
+  color: #312219;
   padding: 0.4em 0.75em;
   font-size: 1.2em;
   cursor: pointer;
   border-radius: 7px;
   box-shadow: 0 0 10px 0 var(--shadow);
-  transition: background-color 0.2s ease-in;
+  transition: filter 0.2s ease-in;
 }
 
 .home .btn:hover {
-  background-color: var(--primary);
+  filter: brightness(110%);
 }
 
 .home p {
@@ -24,6 +24,6 @@
   }
   .home p {
     font-size: 1.5em;
-    margin: 1em 0;
+    margin: 2em 0;
   }
 }
