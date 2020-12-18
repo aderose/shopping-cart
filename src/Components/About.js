@@ -4,7 +4,7 @@ import '../styles/About.css';
 
 const About = (props) => {
   return (
-    <div className="container about">
+    <div className="container card">
       <h1>About Us</h1>
       <h2>What is Champagne?</h2>
       <p>
