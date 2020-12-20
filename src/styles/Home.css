@@ -2,12 +2,14 @@
   border: none;
   background-image: linear-gradient(to bottom, var(--tertiary), var(--primary));
   color: #312219;
-  padding: 0.4em 0.75em;
+  padding: 0.4em 1.5em;
   font-size: 1.2em;
   cursor: pointer;
   border-radius: 7px;
   box-shadow: 0 0 10px 0 var(--shadow);
   transition: filter 0.2s ease-in;
+  display: inline-flex;
+  align-items: center;
 }
 
 .home .btn:hover {
@@ -15,8 +17,9 @@
 }
 
 .arrow {
-  opacity: 0.8;
-  transform: translateX(20%);
+  color: var(--black);
+  opacity: 0.35;
+  margin-left: 0.5em;
 }
 
 .home p {
@@ -24,15 +27,15 @@
 }
 
 .home .btn:hover .arrow {
-  animation: stutter 0.75s linear infinite alternate;
+  animation: stutter 0.5s ease-in infinite alternate;
 }
 
 @keyframes stutter {
   0% {
-    transform: translateX(20%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(50%);
+    transform: translateX(80%);
   }
 }
 
