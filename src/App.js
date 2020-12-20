@@ -11,10 +11,39 @@ import './styles/App.css';
 
 const App = () => {
   const [products, setProducts] = useState([]);
+  const [basket, setBasket] = useState([]);
+  const [grandTotal, setGrandTotal] = useState(0);
 
   useEffect(() => {
     setProducts(productData.products);
   }, []);
+
+  useEffect(() => {
+    setGrandTotal(
+      basket.reduce((total, item) => total + item.price * item.quantity, 0),
+    );
+  }, [basket]);
+
+  const handleCartChange = (id) => (event) => {
+    const newQuantity = parseInt(event.target.value);
+    if (newQuantity === 0) {
+      setBasket(basket.filter((item) => item.id !== id));
+    } else {
+      setBasket(
+        basket.map((item) => {
+          if (item.id === id) {
+            return {
+              ...item,
+              quantity: newQuantity,
+              total: newQuantity * item.price,
+            };
+          } else {
+            return item;
+          }
+        }),
+      );
+    }
+  };
 
   return (
     <div className="app">
@@ -32,7 +61,7 @@ const App = () => {
             </li>
             <li>
               <NavLink to="/cart">
-                <i class="fas fa-shopping-cart"></i>
+                <i className="fas fa-shopping-cart"></i>
               </NavLink>
             </li>
           </ul>
@@ -44,7 +73,17 @@ const App = () => {
             render={(props) => <Shop {...props} products={products} />}
           />
           <Route from="/about" component={About} />
-          <Route from="/cart" component={Cart} />
+          <Route
+            from="/cart"
+            render={(props) => (
+              <Cart
+                {...props}
+                basket={basket}
+                grandTotal={grandTotal}
+                onChange={handleCartChange}
+              />
+            )}
+          />
         </Switch>
       </BrowserRouter>
     </div>
