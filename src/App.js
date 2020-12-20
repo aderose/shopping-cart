@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route, NavLink, Link } from 'react-router-dom';
 
 import Home from './Components/Home';
 import Shop from './Components/Shop';
 import About from './Components/About';
 
+import productData from './data/products.json';
 import './styles/App.css';
 
 const App = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    setProducts(productData.products);
+  }, []);
+
   return (
     <div className="app">
       <BrowserRouter>
@@ -26,7 +33,10 @@ const App = () => {
         </nav>
         <Switch>
           <Route exact from="/" component={Home} />
-          <Route from="/shop" component={Shop} />
+          <Route
+            from="/shop"
+            render={(props) => <Shop {...props} products={products} />}
+          />
           <Route from="/about" component={About} />
         </Switch>
       </BrowserRouter>

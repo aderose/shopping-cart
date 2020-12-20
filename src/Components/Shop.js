@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Product from './Product';
 
 import '../styles/Shop.css';
-import productData from '../data/products.json';
 
-const Shop = (props) => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    setProducts(productData.products);
-  }, []);
-
+const Shop = ({ products }) => {
   return (
     <div className="container shop">
       <h1>Our Products:</h1>
