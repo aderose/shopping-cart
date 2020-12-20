@@ -1,19 +1,7 @@
 .home .btn {
-  border: none;
-  background-image: linear-gradient(to bottom, var(--tertiary), var(--primary));
-  color: #312219;
   padding: 0.4em 1.5em;
   font-size: 1.2em;
-  cursor: pointer;
   border-radius: 7px;
-  box-shadow: 0 0 10px 0 var(--shadow);
-  transition: filter 0.2s ease-in;
-  display: inline-flex;
-  align-items: center;
-}
-
-.home .btn:hover {
-  filter: brightness(110%);
 }
 
 .arrow {

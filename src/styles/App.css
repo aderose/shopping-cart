@@ -69,6 +69,24 @@ li a.active {
   box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.2);
 }
 
+.btn {
+  border: none;
+  background-image: linear-gradient(to bottom, var(--tertiary), var(--primary));
+  color: #312219;
+  padding: 0.25em 0.5em;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 7px;
+  box-shadow: 0 0 10px 0 var(--shadow);
+  transition: filter 0.2s ease-in;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn:hover {
+  filter: brightness(110%);
+}
+
 @media (min-width: 500px) {
   body {
     background-position: center center;
