@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "link": "https://d1rknyb5tfws60.cloudfront.net/images/merchandising/content/wines/taittinger-brut-reserve-22269/mediumCutout.png",
+      "alt": "Taittinger Brut",
+      "title": "Taittinger Brut Réserve NV Champagne",
+      "price": "£41.99"
+    },
+    {
+      "id": 1,
+      "link": "https://d1rknyb5tfws60.cloudfront.net/images/merchandising/content/wines/nicolas-courtin-brut-nv-22033/mediumCutout.png",
+      "alt": "Nicolas Courtin",
+      "title": "Nicolas Courtin Brut NV Champagne",
+      "price": "£19.99"
+    },
+    {
+      "id": 2,
+      "link": "https://d1rknyb5tfws60.cloudfront.net/images/merchandising/content/wines/veuve-clicquot-brut-22055/mediumCutout.jpg",
+      "alt": "Veuve Clicquot",
+      "title": "Veuve Clicquot Brut Champagne",
+      "price": "£49.99"
+    },
+    {
+      "id": 3,
+      "link": "https://d1rknyb5tfws60.cloudfront.net/images/merchandising/content/wines/laurent-perrier-la-cuvee-22082/mediumCutout.png",
+      "alt": "Laurent-Perrier",
+      "title": "Laurent-Perrier La Cuvee Champagne",
+      "price": "£44.99"
+    },
+    {
+      "id": 4,
+      "link": "https://d1rknyb5tfws60.cloudfront.net/images/merchandising/content/wines/bollinger-special-cuvee-22050/mediumCutout.jpg",
+      "alt": "Bollinger",
+      "title": "Bollinger Special Cuvée, Champagne",
+      "price": "£48.99"
+    }
+  ]
+}
