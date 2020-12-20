@@ -35,7 +35,35 @@ const App = () => {
             return {
               ...item,
               quantity: newQuantity,
-              total: newQuantity * item.price,
+            };
+          } else {
+            return item;
+          }
+        }),
+      );
+    }
+  };
+
+  const addProduct = ({ id, quantity }) => {
+    const product = products.find((product) => product.id === id);
+    const cartItem = basket.find((item) => item.id === id);
+    if (cartItem === undefined) {
+      setBasket([
+        ...basket,
+        {
+          id,
+          title: product.title,
+          price: product.price,
+          quantity,
+        },
+      ]);
+    } else {
+      setBasket(
+        basket.map((item) => {
+          if (item.id === id) {
+            return {
+              ...item,
+              quantity: Math.min(item.quantity + quantity, 99),
             };
           } else {
             return item;
@@ -70,7 +98,9 @@ const App = () => {
           <Route exact from="/" component={Home} />
           <Route
             from="/shop"
-            render={(props) => <Shop {...props} products={products} />}
+            render={(props) => (
+              <Shop {...props} products={products} addProduct={addProduct} />
+            )}
           />
           <Route from="/about" component={About} />
           <Route
