@@ -16,10 +16,10 @@
     },
     {
       "id": 2,
-      "link": "https://d1rknyb5tfws60.cloudfront.net/images/merchandising/content/wines/veuve-clicquot-brut-22055/mediumCutout.jpg",
-      "alt": "Veuve Clicquot",
-      "title": "Veuve Clicquot Brut Champagne",
-      "price": 49.99
+      "link": "https://d1rknyb5tfws60.cloudfront.net/images/merchandising/content/wines/heidsieck-co-monopole-22386/mediumCutout.png",
+      "alt": "Heidsieck & Co.",
+      "title": "Heidsieck & Co. Monopole 2011 'Gold Top' Champagne",
+      "price": 29.99
     },
     {
       "id": 3,
@@ -30,10 +30,10 @@
     },
     {
       "id": 4,
-      "link": "https://d1rknyb5tfws60.cloudfront.net/images/merchandising/content/wines/bollinger-special-cuvee-22050/mediumCutout.jpg",
-      "alt": "Bollinger",
-      "title": "Bollinger Special Cuvée, Champagne",
-      "price": 48.99
+      "link": "https://d1rknyb5tfws60.cloudfront.net/images/merchandising/content/wines/nicolas-feuillatte-22420/mediumCutout.png",
+      "alt": "Nicolas Feuillatte",
+      "title": "Nicolas Feuillatte Brut Champagne",
+      "price": 27.99
     }
   ]
 }
