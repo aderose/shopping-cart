@@ -82,7 +82,7 @@ const App = () => {
       {!hasSucceeded || (
         <Notification message="Product has been successfully added!" />
       )}
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <nav className="container navigation">
           <Link className="nav-home" to="/">
             Home
