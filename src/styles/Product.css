@@ -30,6 +30,7 @@
 
 .product-details p {
   align-self: flex-end;
+  line-height: 30px;
 }
 
 .product-details input[type='number'] {
