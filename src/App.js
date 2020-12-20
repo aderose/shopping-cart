@@ -95,8 +95,9 @@ const App = () => {
               <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <NavLink to="/cart">
+              <NavLink className="cart-products" to="/cart">
                 <i className="fas fa-shopping-cart"></i>
+                <p>{basket.length}</p>
               </NavLink>
             </li>
           </ul>

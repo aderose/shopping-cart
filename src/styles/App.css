@@ -27,7 +27,7 @@ ul {
   display: flex;
   list-style-type: none;
   justify-content: space-between;
-  width: 40%;
+  width: 60%;
 }
 
 a {
@@ -89,6 +89,15 @@ li a.active {
 
 .btn:hover {
   filter: brightness(110%);
+}
+
+.cart-products {
+  display: flex;
+  align-items: center;
+}
+
+.cart-products i {
+  margin-right: 0.25em;
 }
 
 @media (min-width: 500px) {
