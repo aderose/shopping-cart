@@ -1,19 +1,22 @@
-.card h1 {
+.about h1 {
   font-size: 2em;
   margin-bottom: 0.25em;
+  word-break: break-all;
 }
 
-.card h2 {
+.about h2 {
   font-size: 1.25em;
   margin: 0.25em 0;
+  word-break: break-all;
 }
 
-.card i {
+.about i {
   margin-right: 0.25em;
 }
 
-.card p {
+.about p {
   font-size: 0.9em;
+  word-break: break-all;
 }
 
 .inline {
@@ -22,19 +25,19 @@
 }
 
 @media (min-width: 550px) {
-  .card h1 {
+  .about h1 {
     margin-bottom: 0.5em;
   }
 
-  .card h2 {
+  .about h2 {
     margin: 0.5em 0;
   }
 
-  .card i {
+  .about i {
     margin-right: 0.5em;
   }
 
-  .card p {
+  .about p {
     font-size: 1.2em;
   }
 }
