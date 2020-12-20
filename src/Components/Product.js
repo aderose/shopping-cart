@@ -26,7 +26,7 @@ const Product = ({ id, link, alt, title, price, submit }) => {
             name="amount"
             id="amount"
             min="1"
-            max="19"
+            max="99"
             autoComplete="off"
             value={value}
             onChange={updateValue}

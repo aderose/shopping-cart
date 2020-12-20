@@ -11,7 +11,7 @@ const CartItem = ({ title, price, quantity, total, onChange }) => {
           value={quantity}
           onChange={onChange}
           min="0"
-          max="19"
+          max="99"
         />
       </td>
       <td>£{total.toFixed(2)}</td>
