@@ -11,10 +11,10 @@ const Cart = ({ basket, grandTotal, onChange }) => {
       <table>
         <thead>
           <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>#</th>
-            <th>Total</th>
+            <th style={{ width: '50%' }}>Product</th>
+            <th style={{ width: '20%' }}>Price</th>
+            <th style={{ width: '10%' }}>#</th>
+            <th style={{ width: '20%' }}>Total</th>
           </tr>
         </thead>
         <tbody>
