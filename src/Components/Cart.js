@@ -18,12 +18,11 @@ const Cart = ({ basket, grandTotal, onChange }) => {
           </tr>
         </thead>
         <tbody>
-          {basket.map(({ id, title, price, quantity, total }) => (
+          {basket.map(({ id, title, price, quantity }) => (
             <CartItem
               title={title}
               price={price}
               quantity={quantity}
-              total={total}
               onChange={onChange(id)}
               key={id}
             />

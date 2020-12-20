@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CartItem = ({ title, price, quantity, total, onChange }) => {
+const CartItem = ({ title, price, quantity, onChange }) => {
   return (
     <tr>
       <td>{title}</td>
@@ -14,7 +14,7 @@ const CartItem = ({ title, price, quantity, total, onChange }) => {
           max="99"
         />
       </td>
-      <td>£{total.toFixed(2)}</td>
+      <td>£{(price * quantity).toFixed(2)}</td>
     </tr>
   );
 };
