@@ -1,30 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Product from './Product';
 
 import '../styles/Shop.css';
+import productData from '../data/products.json';
 
 const Shop = (props) => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    setProducts(productData.products);
+  }, []);
+
   return (
     <div className="container shop">
       <h1>Our Products:</h1>
-      <Product
-        link="https://img2.pngio.com/champagne-bottle-png-transparent-image-moet-champagne-bottle-png-1200_1200.png"
-        alt="Moet"
-        title="Moet & Chandon Brut Imperial Non Vintage Champagne 75Cl"
-        price="£29.00"
-      />
-      <Product
-        link="https://img2.pngio.com/champagne-bottle-png-transparent-image-moet-champagne-bottle-png-1200_1200.png"
-        alt="Moet"
-        title="Moet & Chandon Brut Imperial Non Vintage Champagne 75Cl"
-        price="£29.00"
-      />
-      <Product
-        link="https://img2.pngio.com/champagne-bottle-png-transparent-image-moet-champagne-bottle-png-1200_1200.png"
-        alt="Moet"
-        title="Moet & Chandon Brut Imperial Non Vintage Champagne 75Cl"
-        price="£29.00"
-      />
+      {products.map(({ id, link, alt, title, price }) => (
+        <Product link={link} alt={alt} title={title} price={price} key={id} />
+      ))}
     </div>
   );
 };
