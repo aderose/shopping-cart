@@ -19,7 +19,7 @@ const Product = ({ id, link, alt, title, price, submit }) => {
       <img src={link} alt={alt} />
       <div className="product-details">
         <h2>{title}</h2>
-        <p>{price}</p>
+        <p>£{price.toFixed(2)}</p>
         <form onSubmit={handleSubmit}>
           <input
             type="number"
