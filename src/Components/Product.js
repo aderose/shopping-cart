@@ -12,6 +12,7 @@ const Product = ({ id, link, alt, title, price, submit }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     submit({ id, quantity: parseInt(value) });
+    setValue(1);
   };
 
   return (
