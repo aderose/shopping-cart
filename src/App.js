@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import Shop from './Components/Shop';
 import About from './Components/About';
 import Cart from './Components/Cart';
+import Notification from './Components/Notification';
 
 import productData from './data/products.json';
 import './styles/App.css';
@@ -13,6 +14,7 @@ const App = () => {
   const [products, setProducts] = useState([]);
   const [basket, setBasket] = useState([]);
   const [grandTotal, setGrandTotal] = useState(0);
+  const [hasSucceeded, setHasSucceeded] = useState(false);
 
   useEffect(() => {
     setProducts(productData.products);
@@ -71,10 +73,15 @@ const App = () => {
         }),
       );
     }
+    setHasSucceeded(true);
+    setTimeout(() => setHasSucceeded(false), 5000);
   };
 
   return (
     <div className="app">
+      {!hasSucceeded || (
+        <Notification message="Product has been successfully added!" />
+      )}
       <BrowserRouter>
         <nav className="container navigation">
           <Link className="nav-home" to="/">
