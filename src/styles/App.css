@@ -83,6 +83,10 @@ li a.active {
   align-items: center;
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .btn:hover {
   filter: brightness(110%);
 }
